@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CHAPTER — Multilingual Bookstore</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="script.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #ffffff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-syncopate { font-family: 'Syncopate', sans-serif; }
+    .m-stripe {
+      height: 4px;
+      background: linear-gradient(90deg, #0066b1 0%, #1c69d4 50%, #e22718 100%);
+    }
+    .page { display: none; }
+    .page.active { display: block; }
+    .cart-panel {
+      transform: translateX(100%);
+      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-panel.open { transform: translateX(0); }
+    .cart-overlay {
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+    }
+    .cart-overlay.open {
+      opacity: 1;
+      pointer-events: all;
+    }
+    .filter-checkbox:checked + label {
+      background: #ffffff;
+      color: #000000;
+    }
+    .book-card-img {
+      width: 100%;
+      aspect-ratio: 2 / 3;
+      object-fit: cover;
+    }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0c0c0c; }
+    ::-webkit-scrollbar-thumb { background: #3c3c3c; }
+    ::selection { background: #ffffff; color: #000000; }
+    input::placeholder { color: #5c5c5c; }
+    .spec-table td {
+      padding: 16px 0;
+      border-bottom: 1px solid #3c3c3c;
+      vertical-align: top;
+    }
+    .spec-table tr:last-child td { border-bottom: none; }
+    .lang-dot {
+      width: 6px; height: 6px; border-radius: 50%; display: inline-block;
+    }
+    .lang-dot.en { background: #0066b1; }
+    .lang-dot.fr { background: #1c69d4; }
+    .lang-dot.es { background: #e22718; }
+    @media (max-width: 768px) {
+      .plp-layout { flex-direction: column; }
+      .pdp-layout { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<div class="m-stripe"></div>
+
+<header class="sticky top-0 z-50 bg-[#000000] border-b border-[#3c3c3c]">
+  <div class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <a href="#" onclick="navigateTo('home')" class="font-syncopate text-xl font-bold tracking-[0.3em] text-[#ffffff] no-underline hover:opacity-80 transition-opacity">CHAPTER</a>
+    <div class="flex-1 max-w-[480px] hidden md:block">
+      <input type="text" id="globalSearch" onkeydown="if(event.key==='Enter'){state.filters.search=this.value;navigateTo('plp')}" class="w-full bg-transparent border border-[#3c3c3c] px-4 py-2 text-sm text-[#ffffff] font-light tracking-wider outline-none focus:border-[#ffffff] transition-colors" placeholder="SEARCH TITLES, AUTHORS..." style="border-radius:0">
+    </div>
+    <div class="flex items-center gap-6">
+      <button onclick="toggleCart()" class="relative bg-transparent border-0 cursor-pointer text-[#ffffff] hover:opacity-70 transition-opacity">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 01-8 0"></path>
+        </svg>
+        <span id="cartCount" class="absolute -top-2 -right-2 bg-[#ffffff] text-[#000000] text-[10px] font-bold font-syncopate w-5 h-5 flex items-center justify-center">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="min-h-screen">
+
+  <section id="page-home" class="page active">
+    <div class="relative h-screen max-h-[900px] overflow-hidden bg-[#000000]">
+      <div class="absolute inset-0">
+        <img src="https://images.unsplash.com/photo-1474932430478-367dbb6832c1?w=1600&q=80" alt="" class="w-full h-full object-cover opacity-60" id="heroImg">
+        <div class="absolute inset-0 bg-gradient-to-r from-[#000000] via-[#000000]/60 to-transparent"></div>
+      </div>
+      <div class="relative z-10 h-full flex items-center max-w-[1440px] mx-auto px-6">
+        <div class="max-w-[700px]" id="heroContent">
+          <p class="font-syncopate text-sm tracking-[0.3em] text-[#8c8c8c] mb-6 hero-line">CURATED LITERATURE</p>
+          <h1 class="font-syncopate text-7xl md:text-8xl font-bold tracking-[0.08em] leading-[1.1] mb-8 hero-line" style="text-transform:uppercase">
+            Where Words<br>
+            <span class="text-[#8c8c8c]">Become Worlds</span>
+          </h1>
+          <button onclick="navigateTo('plp')" class="hero-line inline-block bg-transparent border border-[#ffffff] px-10 py-4 font-syncopate text-sm tracking-[0.25em] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000] transition-all duration-300 cursor-pointer" style="border-radius:0">
+            DISCOVER EDITIONS
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-[1440px] mx-auto px-6 py-28" id="curationBands"></div>
+  </section>
+
+  <section id="page-plp" class="page">
+    <div class="max-w-[1440px] mx-auto px-6 py-24">
+      <h2 class="font-syncopate text-3xl font-bold tracking-[0.2em] mb-2">ALL EDITIONS</h2>
+      <p class="text-[#8c8c8c] font-light text-sm tracking-wider mb-16">Browse our trilingual collection</p>
+      <div class="plp-layout flex gap-16">
+        <aside class="w-64 shrink-0">
+          <div class="sticky top-28">
+            <h3 class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c] mb-6">LANGUAGE</h3>
+            <div class="space-y-3 mb-12" id="langFilters"></div>
+            <button onclick="clearFilters()" class="text-xs font-syncopate tracking-[0.2em] text-[#8c8c8c] hover:text-[#ffffff] transition-colors bg-transparent border-0 cursor-pointer">CLEAR ALL</button>
+          </div>
+        </aside>
+        <div class="flex-1">
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16" id="plpGrid"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="page-pdp" class="page">
+    <div class="max-w-[1440px] mx-auto px-6 py-24">
+      <button onclick="navigateTo('plp')" class="bg-transparent border-0 text-[#8c8c8c] font-syncopate text-xs tracking-[0.25em] cursor-pointer hover:text-[#ffffff] transition-colors mb-12">← BACK TO SHOP</button>
+      <div class="pdp-layout flex gap-16">
+        <div class="w-1/2 shrink-0">
+          <div class="bg-[#0c0c0c] overflow-hidden">
+            <img id="pdpCover" src="" alt="" class="w-full aspect-[2/3] object-cover">
+          </div>
+        </div>
+        <div class="flex-1" id="pdpInfoCol">
+          <div class="sticky top-28">
+            <div id="pdpLangIndicator" class="mb-4"></div>
+            <h1 id="pdpTitle" class="font-syncopate text-4xl font-bold tracking-[0.05em] mb-3"></h1>
+            <p id="pdpAuthor" class="text-[#8c8c8c] font-light text-lg mb-8"></p>
+            <p id="pdpDescription" class="font-light text-sm leading-relaxed text-[#cccccc] mb-10"></p>
+            <button id="pdpAddToCart" onclick="addToCartFromPDP()" class="w-full bg-transparent border border-[#ffffff] px-8 py-4 font-syncopate text-sm tracking-[0.25em] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000] transition-all duration-300 cursor-pointer mb-12" style="border-radius:0">
+              ADD TO CART
+            </button>
+            <div>
+              <h4 class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c] mb-4">SPECIFICATIONS</h4>
+              <table class="w-full spec-table text-sm">
+                <tbody id="pdpSpecs"></tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<div class="cart-overlay fixed inset-0 z-40 bg-[#000000]/80" onclick="toggleCart()" id="cartOverlay"></div>
+
+<div class="cart-panel fixed top-0 right-0 z-50 h-full w-full max-w-[480px] bg-[#0c0c0c] border-l border-[#3c3c3c] overflow-y-auto" id="cartPanel">
+  <div class="p-8">
+    <div class="flex items-center justify-between mb-10">
+      <h2 class="font-syncopate text-sm tracking-[0.25em]">CART</h2>
+      <button onclick="toggleCart()" class="bg-transparent border-0 text-[#ffffff] cursor-pointer hover:opacity-70 transition-opacity">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+    </div>
+    <div id="cartItems"></div>
+    <div id="cartEmpty" class="text-[#5c5c5c] font-light text-sm py-20 text-center">YOUR CART IS EMPTY</div>
+    <div id="cartFooter" class="hidden">
+      <div class="border-t border-[#3c3c3c] pt-6 mt-6">
+        <div class="flex justify-between items-center mb-6">
+          <span class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c]">TOTAL</span>
+          <span id="cartTotal" class="font-syncopate text-xl font-bold tracking-wider"></span>
+        </div>
+        <button class="w-full bg-[#ffffff] text-[#000000] border-0 px-8 py-4 font-syncopate text-sm tracking-[0.25em] cursor-pointer hover:opacity-90 transition-opacity" style="border-radius:0">PROCEED TO CHECKOUT</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="border-t border-[#3c3c3c] mt-24">
+  <div class="m-stripe"></div>
+  <div class="max-w-[1440px] mx-auto px-6 py-12 flex items-center justify-between">
+    <span class="font-syncopate text-xs tracking-[0.3em] text-[#5c5c5c]">CHAPTER © 2026</span>
+    <div class="flex gap-6 font-syncopate text-[10px] tracking-[0.25em] text-[#5c5c5c]">
+      <span>EN</span>
+      <span>FR</span>
+      <span>ES</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
