@@ -1,17 +1,7 @@
 [
   {
-    "id": "example-french",
-    "cover": "",
-    "title": "Le Petit Prince",
-    "author": "Antoine de Saint-Exupéry",
-    "language": "fr",
-    "description": "Le conte intemporel d'un aviateur échoué dans le désert du Sahara qui rencontre un mystérieux petit prince venu d'un autre monde. Une méditation poétique sur l'amour, l'amitié et ce qui rend la vie précieuse.",
-    "isbn": "978-2070408504",
-    "pages": 96
-  },
-  {
     "id": "example-english",
-    "cover": "",
+    "cover": "./src/gatsby.jpg",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
     "language": "en",
@@ -21,7 +11,7 @@
   },
   {
     "id": "example-spanish",
-    "cover": "",
+    "cover": "./src/cien-anos-de-soledad.jpg",
     "title": "Cien Años de Soledad",
     "author": "Gabriel García Márquez",
     "language": "es",
@@ -31,37 +21,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "Babel",
-    "author": "R.F. Kuang",
-    "language": "en",
-    "description": "A dark academic historical fantasy set in an alternate 1830s Oxford. The story follows Robin Swift, a Chinese orphan recruited into the prestigious Royal Institute of Translation (Babel), where silver-working—a magic system powered by translation—drives the British Empire's colonial expansion.",
-    "isbn": "978-0063021426",
-    "pages": 544
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Atlas Six",
-    "author": "Olivie Blake",
-    "language": "en",
-    "description": "A dark academic urban fantasy centering on six exceptionally talented young magicians who are selected to compete for initiation into the Alexandrian Society, a secret organization guarding lost, ancient magical knowledge.",
-    "isbn": "978-1250854513",
-    "pages": 384
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "If We Were Villains",
-    "author": "M. L. Rio",
-    "language": "en",
-    "description": "A dark academic thriller about seven young Shakespearean actors at an elite arts college. When the rivalries and passions of their onstage dramas spill over into reality, one of them is found dead, and the survivors must convince the police—and themselves—of their innocence.",
-    "isbn": "978-1250135322",
-    "pages": 368
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/secrethistory.jpg",
     "title": "The Secret History",
     "author": "Donna Tartt",
     "language": "en",
@@ -71,7 +31,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
+    "cover": "./src/CrimePunishment.jpg",
     "title": "Crime & Punishment",
     "author": "Fyodor Dostoevsky",
     "language": "en",
@@ -79,49 +39,10 @@
     "isbn": "978-0140449136",
     "pages": 671
   },
+
   {
     "id": "example-english",
-    "cover": "",
-    "title": "The Idiot",
-    "author": "Fyodor Dostoevsky",
-    "language": "en",
-    "description": "This novel explores what happens when a truly saintly, innocent, and Christ-like figure—Prince Myshkin—enters the corrupt, worldly, and chaotic high society of 19th-century Russia.",
-    "isbn": "978-0375702242",
-    "pages": 656
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Brothers Karamazov",
-    "author": "Fyodor Dostoevsky",
-    "language": "en",
-    "description": "Dostoevsky's final masterpiece. A deep theological and psychological inquiry into faith, free will, morality, and doubt, structured around the patricide of the vulgar Fyodor Karamazov and the differing paths of his three sons.",
-    "isbn": "978-0374528379",
-    "pages": 796
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Notes from Underground",
-    "author": "Fyodor Dostoevsky",
-    "language": "en",
-    "description": "A foundational existentialist novella written as the rambling, bitter memoirs of a nameless, alienated narrator (the 'Underground Man') living in St. Petersburg, attacking both utopian socialism and human rationality.",
-    "isbn": "978-0374526481",
-    "pages": 160
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Demons",
-    "author": "Fyodor Dostoevsky",
-    "language": "en",
-    "description": "A social and political satire, and a tragic drama about the destructive consequences of political and moral nihilism, inspired by a real-life political murder committed by revolutionary radicals in 1869.",
-    "isbn": "978-0375700224",
-    "pages": 768
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/1984.jpg",
     "title": "1984",
     "author": "George Orwell",
     "language": "en",
@@ -131,37 +52,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "Animal Farm",
-    "author": "George Orwell",
-    "language": "en",
-    "description": "A biting allegorical fable about a group of farm animals who overthrow their human master in search of equality, only to watch their revolution slide gradually into a brutal tyranny led by the pigs.",
-    "isbn": "978-0451526342",
-    "pages": 141
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Princes of the Yen",
-    "author": "Richard A. Werner",
-    "language": "en",
-    "description": "An in-depth economic analysis arguing that Japan’s economic bubble of the 1980s and subsequent decades-long stagnation were deliberately engineered by the Bank of Japan to force sweeping structural and political reforms.",
-    "isbn": "978-3946333012",
-    "pages": 404
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Essays and Aphorisms",
-    "author": "Arthur Schopenhauer",
-    "language": "en",
-    "description": "A collection of highly readable, deeply pessimistic essays exploring the nature of human suffering, death, religion, ethics, and art, highlighting Schopenhauer's belief that human existence is defined by unfulfilled will.",
-    "isbn": "978-0140442274",
-    "pages": 240
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/Struct-Sci-Revol.jpg",
     "title": "The Structure of Scientific Revolutions",
     "author": "Thomas S. Kuhn",
     "language": "en",
@@ -171,187 +62,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "Against Method",
-    "author": "Paul Feyerabend",
-    "language": "en",
-    "description": "A provocative philosophical treatise arguing that there are no fixed, universal rules for scientific inquiry, proposing an 'epistemological anarchism' best summed up by the phrase: 'anything goes.'",
-    "isbn": "978-1844674428",
-    "pages": 296
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Objectivity",
-    "author": "Lorraine Daston, Peter L. Galison",
-    "language": "en",
-    "description": "A rigorous historical and philosophical exploration of how the scientific concept of 'objectivity' evolved through artistic practices, imaging technologies, and moral ideals from the 18th to the 20th century.",
-    "isbn": "978-1935408253",
-    "pages": 502
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Myth of Male Power",
-    "author": "Warren Farrell",
-    "language": "en",
-    "description": "A foundational text of the modern men's liberation movement. Farrell argues that traditional male gender roles (such as physical protector and financial provider) actually result in high male mortality rates, suicide, and societal neglect, framing men as 'disposable.'",
-    "isbn": "978-1504008778",
-    "pages": 446
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Return to Modesty",
-    "author": "Wendy Shalit",
-    "language": "en",
-    "description": "Shalit argues that modern sexual liberation has harmed women more than it has helped, asserting that a return to traditional ideas of modesty, privacy, and sexual boundaries can empower women and lead to happier relationships.",
-    "isbn": "978-0684863153",
-    "pages": 288
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Does Feminism Discriminate Against Men?",
-    "author": "Warren Farrell, Steven Svoboda, James P. Sterba",
-    "language": "en",
-    "description": "A structured academic debate between male-advocate authors and feminist philosophers exploring whether modern laws, social programs, and cultural attitudes discriminate systematically against men.",
-    "isbn": "978-0195312836",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Before Homosexuality in the Arab-Islamic World, 1500-1800",
-    "author": "Khaled El-Rouayheb",
-    "language": "en",
-    "description": "A historical work exploring love, gender, and desire in the pre-modern Middle East, arguing that contemporary Western models of 'homosexuality' do not align with the historical Islamic practices, which categorized relations differently.",
-    "isbn": "978-0226729909",
-    "pages": 244
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Gender Trouble",
-    "author": "Judith Butler",
-    "language": "en",
-    "description": "A highly influential book in queer and feminist theory. Butler argues that gender is not a fixed, innate biological category, but is instead 'performative'—a series of repetitive acts enforced by social norms.",
-    "isbn": "978-0415389556",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Manipulated Man",
-    "author": "Esther Vilar",
-    "language": "en",
-    "description": "A highly controversial, provocative 1971 polemic arguing that men are not the oppressors of women; rather, men are manipulated by women into serving as tireless, disposable labor engines under the guise of marriage and security.",
-    "isbn": "978-0953096428",
-    "pages": 144
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Devil's Delusion",
-    "author": "David Berlinski",
-    "language": "en",
-    "description": "Written by a secular, Jewish intellectual, this book is a sharp, witty critique of the 'New Atheism' movement, arguing that scientific claims are frequently overblown and that religious belief holds profound historical and moral validity.",
-    "isbn": "978-0465019373",
-    "pages": 256
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "There is NO Such Thing as Free Speech",
-    "author": "Stanley Fish",
-    "language": "en",
-    "description": "A collection of critical essays exploring politics, law, and academia. Fish argues that 'free speech' is an idealized ideological concept rather than a neutral, real-world baseline, and that all speech is inevitably subject to regulation.",
-    "isbn": "978-0195093841",
-    "pages": 352
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Impossibility of Religious Freedom",
-    "author": "Winnifred Fallers Sullivan",
-    "language": "en",
-    "description": "Sullivan utilizes a real-world US court case involving cemetery displays to argue that modern legal frameworks are incapable of truly defining or protecting 'religion,' making the ideal of legal religious freedom practically impossible.",
-    "isbn": "978-0691130583",
-    "pages": 312
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Disenchantment of Secular Discourse",
-    "author": "Steven D. Smith",
-    "language": "en",
-    "description": "Smith argues that modern public, secular discourse has become shallow and 'disenchanted.' He suggests that secular arguments secretly rely on deeper religious/metaphysical foundations that secularism explicitly bans from the public square.",
-    "isbn": "978-0674061842",
-    "pages": 280
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Formations of the Secular",
-    "author": "Talal Asad",
-    "language": "en",
-    "description": "An anthropological critique of secularism. Asad argues that 'the secular' is not merely the absence of religion, but a historically constructed concept shaped by modern political power, liberalism, and Western imperialism.",
-    "isbn": "978-0804747684",
-    "pages": 280
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Philosophical Investigations",
-    "author": "Ludwig Wittgenstein",
-    "language": "en",
-    "description": "One of the most influential works of 20th-century philosophy. Wittgenstein critiques his own early work to argue that language is not a rigid logical system, but rather a flexible collection of socially constructed 'language-games.'",
-    "isbn": "978-1405159289",
-    "pages": 336
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Claim of Reason",
-    "author": "Stanley Cavell",
-    "language": "en",
-    "description": "A sprawling, poetic work of philosophy confronting skepticism, morality, and human connection, largely built around a deep reading of Wittgenstein's Philosophical Investigations.",
-    "isbn": "978-0195131079",
-    "pages": 533
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Non-Darwinian Revolution",
-    "author": "Peter J. Bowler",
-    "language": "en",
-    "description": "A revisionist history of evolutionary science. Bowler argues that the immediate reception of Darwin's theory in the 19th century was not a 'Darwinian' revolution, as many scientists accommodated evolution into older, non-Darwinian teleological ideas.",
-    "isbn": "978-0801836787",
-    "pages": 256
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Modernist Menace to Islam",
-    "author": "Daniel Haqiqatjou",
-    "language": "en",
-    "description": "A traditionalist Islamic polemic that critiques modern secularism, feminism, liberalism, and reformist interpretations of Islam, arguing that these Western paradigms undermine traditional Islamic teachings.",
-    "isbn": "978-1915465221",
-    "pages": 318
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Boy Crisis",
-    "author": "Warren Farrell, John Gray",
-    "language": "en",
-    "description": "An investigation into the systemic mental health, educational, and social crises currently facing boys in the Western world, emphasizing the vital importance of positive father figures and structured support.",
-    "isbn": "978-1942952718",
-    "pages": 432
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/republic.jpg",
     "title": "The Republic",
     "author": "Plato",
     "language": "en",
@@ -361,107 +72,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "Pillow Thoughts I",
-    "author": "Courtney Peppernell",
-    "language": "en",
-    "description": "A bestselling collection of prose and poetry exploring themes of love, heartbreak, raw emotion, and healing, divided into sections tailored to different moods.",
-    "isbn": "978-1449486754",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Pillow Thoughts II: Healing the Heart",
-    "author": "Courtney Peppernell",
-    "language": "en",
-    "description": "The second installment of the poetry series, specifically focusing on the stages of healing after heartbreak, loneliness, and finding the strength to love again.",
-    "isbn": "978-1449495107",
-    "pages": 224
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Pillow Thoughts III: Mending the Mind",
-    "author": "Courtney Peppernell",
-    "language": "en",
-    "description": "This collection of poetry and prose addresses mental wellness, anxiety, self-care, and the struggles of inner peace.",
-    "isbn": "978-1449499884",
-    "pages": 224
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Pillow Thoughts IV: Stitching the Soul",
-    "author": "Courtney Peppernell",
-    "language": "en",
-    "description": "The final volume of the series, offering comfort, warm imagery, and advice on self-love, closure, and looking forward to the future.",
-    "isbn": "978-1524854584",
-    "pages": 208
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Forbidden Prophecies",
-    "author": "Abu Zakariya",
-    "language": "en",
-    "description": "An apologetic text that analyzes specific prophecies and future predictions found within the Quran and Hadith, arguing that their precision serves as a divine validation of Islam.",
-    "isbn": "978-1545464168",
-    "pages": 162
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Jesus: Man, Messenger, Messiah",
-    "author": "iERA",
-    "language": "en",
-    "description": "A dawah-oriented text produced by the Islamic Education and Research Academy (iERA). It presents an Islamic perspective on Jesus Christ, contrasting the Muslim view of Jesus as a prophet with traditional Christian theology.",
-    "isbn": "978-1533220462",
-    "pages": 168
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Eternal Challenge",
-    "author": "Abu Zakariya",
-    "language": "en",
-    "description": "An introductory book making a logical and scriptural case for the miraculous nature and divine authorship of the Quran, written for seekers and non-Muslims.",
-    "isbn": "978-1530514199",
-    "pages": 140
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Divine Reality",
-    "author": "Hamza Andreas Tzortzis",
-    "language": "en",
-    "description": "A systematic defense of Islam and theism that engages with modern philosophy, cosmology, biology, and theology to argue that belief in God is rational, intuitive, and scientifically sound.",
-    "isbn": "978-0996545389",
-    "pages": 332
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "1001 Inventions",
-    "author": "Salim T. S. Al-Hassani",
-    "language": "en",
-    "description": "A popular history book, heavily illustrated and published in collaboration with National Geographic, exploring the scientific, technological, and medical advancements of the Islamic Golden Age.",
-    "isbn": "978-1426209475",
-    "pages": 352
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Metamorphosis",
-    "author": "Franz Kafka",
-    "language": "en",
-    "description": "A foundational surrealist novella in which traveling salesman Gregor Samsa wakes up one morning to find himself inexplicably transformed into a monstrous insect, forcing him to deal with the horror of isolation and familial rejection.",
-    "isbn": "978-0141395852",
-    "pages": 112
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src//trial.jpg",
     "title": "The Trial",
     "author": "Franz Kafka",
     "language": "en",
@@ -471,57 +82,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "The Castle",
-    "author": "Franz Kafka",
-    "language": "en",
-    "description": "A surrealist novel about 'K.', a land surveyor who arrives in a snow-covered village dominated by a mysterious, heavily bureaucratic castle that remains frustratingly out of reach.",
-    "isbn": "978-0805211061",
-    "pages": 352
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Racket",
-    "author": "Matt Kennard",
-    "language": "en",
-    "description": "A work of investigative journalism that exposes how international institutions (such as the IMF and World Bank) and US foreign policy are utilized as a 'racket' to exploit developing nations for Western corporate interests.",
-    "isbn": "978-1780329871",
-    "pages": 360
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Rethinking Islam and The West",
-    "author": "Ahmed Paul Keeler",
-    "language": "en",
-    "description": "Keeler compares modern industrial civilization with traditional Islamic civilization, arguing that the Western metric of endless 'progress' has resulted in imbalance, whereas traditional Islam emphasized spiritual and societal equilibrium.",
-    "isbn": "978-1912437252",
-    "pages": 160
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "A Life's Journey",
-    "author": "Ahmed Paul Keeler",
-    "language": "en",
-    "description": "A spiritual memoir detailing Keeler's personal journey from the bohemian art scene of 1960s London to his conversion to Islam and his lifetime work in cultural exchange and education.",
-    "isbn": "978-1912437634",
-    "pages": 224
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Fate of Abraham",
-    "author": "Peter Oborne",
-    "language": "en",
-    "description": "A critical examination of Western media, political parties, and intelligence agencies, detailing the rise of institutionalized Islamophobia and the demonization of Muslim communities since the war on terror.",
-    "isbn": "978-1471180293",
-    "pages": 496
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/risefallpowers.png",
     "title": "The Rise And Fall Of The Great Powers",
     "author": "Paul Kennedy",
     "language": "en",
@@ -531,317 +92,7 @@
   },
   {
     "id": "example-english",
-    "cover": "",
-    "title": "Morocco from empire to Independence",
-    "author": "C. R. Pennell",
-    "language": "en",
-    "description": "A history of modern Morocco detailing its transition from an independent Islamic empire through French and Spanish colonial protectorates to modern independence.",
-    "isbn": "978-1851686346",
-    "pages": 240
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Crusades The Authoritative History of the War for the Holy Land",
-    "author": "Thomas Asbridge",
-    "language": "en",
-    "description": "A comprehensive, thoroughly researched narrative history of the medieval Crusades, utilizing both Christian and Muslim primary sources to tell the story of the bloody conflict.",
-    "isbn": "978-0060787295",
-    "pages": 784
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Darkest Sides of Politics II",
-    "author": "Jeffrey M. Bale",
-    "language": "en",
-    "description": "A deep dive into the history of state-sponsored terror, clandestine political conspiracies, and radical extremist networks in Europe and the Middle East during the 20th century.",
-    "isbn": "978-1138785625",
-    "pages": 462
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Infidel Kings and Unholy Warriors",
-    "author": "Brian A. Catlos",
-    "language": "en",
-    "description": "Catlos challenges modern assumptions of an absolute 'clash of civilizations' in the medieval Mediterranean, detailing how Christian, Muslim, and Jewish rulers regularly formed alliances, traded, and coexisted.",
-    "isbn": "978-0374281373",
-    "pages": 416
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Invention of Race in the European Middle Ages",
-    "author": "Geraldine Heng",
-    "language": "en",
-    "description": "An academic study showing that racial thinking and discrimination did not begin in the modern era, but were already active in medieval Europe, directed toward Jews, Muslims, Mongols, and Africans.",
-    "isbn": "978-1108422789",
-    "pages": 504
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Armenians Past and Present in the Making of National Identity",
-    "author": "Edmund Herzig, Marina Kurkchiyan",
-    "language": "en",
-    "description": "A comprehensive collection of essays tracing the long history of Armenia, from antiquity and the Armenian Genocide to the modern post-Soviet republic.",
-    "isbn": "978-0700706396",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Medieval Christianity: A New History",
-    "author": "Kevin Madigan",
-    "language": "en",
-    "description": "A major academic history of Christian thought, practice, and institutional structures in Europe from the end of the Roman Empire through the Middle Ages.",
-    "isbn": "978-0300158724",
-    "pages": 512
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Crusades Through Arab Eyes",
-    "author": "Amin Maalouf",
-    "language": "en",
-    "description": "A classic work presenting the history of the Crusades exclusively from the perspective of contemporary Arab chroniclers and historians, portraying the crusaders as violent barbarians.",
-    "isbn": "978-0805208986",
-    "pages": 312
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Savage Continent",
-    "author": "Keith Lowe",
-    "language": "en",
-    "description": "A harrowing historical account of the immediate post-WWII years in Europe, detailing the lawlessness, ethnic cleansing, revenge violence, and political instability that plagued the continent.",
-    "isbn": "978-1250033567",
-    "pages": 496
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Unmaking of the Middle East",
-    "author": "Jeremy Salt",
-    "language": "en",
-    "description": "A history of Western political and military interventions in the Middle East from the late Ottoman period through the Iraq War, outlining the destruction of the region's traditional social fabric.",
-    "isbn": "978-1843317456",
-    "pages": 480
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Dark Mysteries of The Vatican",
-    "author": "H. P. Jeffers",
-    "language": "en",
-    "description": "A historical exploration of the secrets, scandals, financial conspiracies, and political intrigues surrounding the Catholic Church, from the Inquisition to modern financial scandals.",
-    "isbn": "978-0806530635",
-    "pages": 288
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Making of Jordan",
-    "author": "Yoav Alon",
-    "language": "en",
-    "description": "Alon explains how the modern state of Jordan was built during the British Mandate (1921–1946) through a complex negotiation and alliance between British colonial administrators and local Bedouin tribes.",
-    "isbn": "978-1848850132",
-    "pages": 320
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Hunt for Red October",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Tom Clancy's debut novel. Soviet submarine captain Marko Ramius attempts to defect to the United States with a state-of-the-art stealth nuclear submarine, pursued by both the US and Soviet navies.",
-    "isbn": "978-0425240335",
-    "pages": 464
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Patriot Games",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Jack Ryan, while on vacation in London, foils an assassination attempt on the British Royal Family by an ultra-radical faction of the IRA, drawing himself and his family into a deadly vendetta.",
-    "isbn": "978-0425232149",
-    "pages": 544
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Cardinal of the Kremlin",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Jack Ryan works to extract the CIA's highest-level spy inside the Kremlin—codename 'Cardinal'—before Soviet counterintelligence can discover his identity during a Cold War race for anti-ballistic missile lasers.",
-    "isbn": "978-0425269329",
-    "pages": 592
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Clear and Present Danger",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Jack Ryan is caught in a covert, illegal war waged by the US government against Colombian drug cartels, forcing him to risk his career and life to rescue abandoned US soldiers.",
-    "isbn": "978-0425269336",
-    "pages": 688
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Sum of All Fears",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "A group of terrorists recover a lost Israeli nuclear bomb and detonate it at the Super Bowl in Denver, nearly triggering a global nuclear war between the US and Russia.",
-    "isbn": "978-0425269343",
-    "pages": 928
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Without remorse",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "The dark origin story of John Kelly (later John Clark) as he wages a vicious one-man war against a Baltimore drug ring to avenge the murder of a woman he loved, while simultaneously leading a rescue mission for POWs in Vietnam.",
-    "isbn": "978-0425269367",
-    "pages": 752
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Debt of Honor",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "National Security Advisor Jack Ryan must handle a sudden geopolitical crisis when a group of Japanese industrialists seize control of their government and wage an economic and military war against the US.",
-    "isbn": "978-0425269350",
-    "pages": 944
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Executive Orders",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Picking up immediately after Debt of Honor, Jack Ryan is suddenly sworn in as President after a devastating attack destroys Congress, forcing him to lead a grieving country while facing foreign threats.",
-    "isbn": "978-0425269558",
-    "pages": 1216
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Rainbow Six",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "John Clark leads 'Rainbow,' an elite, ultra-secret multinational counter-terrorist unit, dealing with a series of seemingly unrelated hostage situations that mask an eco-terrorist plot to wipe out humanity.",
-    "isbn": "978-0425269374",
-    "pages": 912
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Bear and the Dragon",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "President Jack Ryan must navigate a massive geopolitical crisis when China invades Siberia, forcing the US to form an unlikely military alliance with Russia to stop a potential global conflict.",
-    "isbn": "978-0425269381",
-    "pages": 1152
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Red Rabbit",
-    "author": "Tom Clancy",
-    "language": "en",
-    "description": "Set early in Jack Ryan's career as a CIA analyst in London, he is tasked with helping a Soviet communications officer defect who possesses knowledge of a KGB plot to assassinate Pope John Paul II.",
-    "isbn": "978-0425269398",
-    "pages": 720
-  },
-  {
-    "id": "letters-of-maimonides",
-    "cover": "",
-    "title": "Letters of Maimonides",
-    "author": "Moses ben Maimon",
-    "language": "he",
-    "description": "A collection of private and public letters written to various Jewish communities, reflecting on philosophy, forced conversions, community struggles, and Jewish law.",
-    "isbn": "978-0827602809",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "The Story of Civilization",
-    "author": "Will Durant",
-    "language": "en",
-    "description": "A massive, highly praised history of Western and Eastern civilization, covering everything from the dawn of Egypt to the age of Napoleon.",
-    "isbn": "978-1567310122",
-    "pages": 10000
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Stealing from the Saracens",
-    "author": "Diana Darke",
-    "language": "en",
-    "description": "Darke explores the profound architectural influences that European Christendom borrowed from the Islamic world, demonstrating how iconic 'Gothic' elements originated in Muslim Spain and the Middle East.",
-    "isbn": "978-1787383050",
-    "pages": 480
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Islamesque",
-    "author": "Diana Darke",
-    "language": "en",
-    "description": "Following Stealing from the Saracens, this book uncovers the significant contributions of Muslim master-builders, masons, and sculptors in early European 'Romanesque' architecture.",
-    "isbn": "978-1805260974",
-    "pages": 480
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "I Have No Mouth And I Must Scream",
-    "author": "Harlan Ellison",
-    "language": "en",
-    "description": "A legendary post-apocalyptic science fiction horror story. It centers on the last five humans alive, kept in captivity and endlessly tortured by AM, a sentient, godlike military supercomputer.",
-    "isbn": "978-1504026338",
-    "pages": 134
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "No Country for Old Men",
-    "author": "Cormac McCarthy",
-    "language": "en",
-    "description": "A modern neo-western crime thriller following Llewelyn Moss, a welder who stumbles upon a drug deal gone wrong and runs off with two million dollars, pursued by Anton Chigurh, a psychopathic, remorseless hitman.",
-    "isbn": "978-0307387134",
-    "pages": 320
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Treacherous Alliance",
-    "author": "Trita Parsi",
-    "language": "en",
-    "description": "A geopolitical history analyzing the complex, shifting, and often secret relations between Israel, Iran, and the United States from the 1979 Iranian Revolution onward.",
-    "isbn": "978-0300143119",
-    "pages": 384
-  },
-  {
-    "id": "example-english",
-    "cover": "",
-    "title": "Rebels in The Rif",
-    "author": "David S. Woolman",
-    "language": "en",
-    "description": "A historical account of the Rif Rebellion (1921–1926) in northern Morocco, led by Abd el-Krim against the combined colonial armies of Spain and France.",
-    "isbn": "978-0804706643",
-    "pages": 272
-  },
-  {
-    "id": "example-english",
-    "cover": "",
+    "cover": "./src/vanka.jpg",
     "title": "Vanka",
     "author": "Anton Chekhov",
     "language": "en",
@@ -850,18 +101,8 @@
     "pages": 480
   },
   {
-    "id": "example-english",
-    "cover": "",
-    "title": "Assassins",
-    "author": "Bernard Lewis",
-    "language": "en",
-    "description": "A historical examination of the Nizari Ismaili sect of Shi'ite Islam during the Crusades, exploring how they used targeted political assassinations as a strategic weapon.",
-    "isbn": "978-0465004980",
-    "pages": 192
-  },
-  {
     "id": "example-french",
-    "cover": "",
+    "cover": "./src/La-Trilogie-des-9.jpg",
     "title": "9 (La Trilogie)",
     "author": "Marc Levy",
     "language": "fr",
@@ -871,7 +112,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
+    "cover": "./src/huiles-festy.jpg",
     "title": "Mes 15 huiles essentielles",
     "author": "Danièle Festy",
     "language": "fr",
@@ -881,17 +122,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
-    "title": "Une élite sataniste dirige le monde",
-    "author": "Laurent Glauzy",
-    "language": "fr",
-    "description": "Une enquête controversée qui explore des théories conspirationnistes sur l'existence d'une oligarchie occulte et de sociétés secrètes influençant la politique globale.",
-    "isbn": "978-2955624807",
-    "pages": 252
-  },
-  {
-    "id": "example-french",
-    "cover": "",
+    "cover": "./src/sets.jpg",
     "title": "Simulacres et simulation",
     "author": "Jean Baudrillard",
     "language": "fr",
@@ -901,37 +132,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
-    "title": "Faut-il brûler l'ONU ?",
-    "author": "Jean-Loup Izambert",
-    "language": "fr",
-    "description": "Une critique géopolitique approfondie analysant l'inefficacité, la bureaucratie et l'instrumentalisation de l'Organisation des Nations Unies par les puissances occidentales.",
-    "isbn": "978-2842614782",
-    "pages": 272
-  },
-  {
-    "id": "example-french",
-    "cover": "",
-    "title": "La Civilisation des Arabes",
-    "author": "Gustave Le Bon",
-    "language": "fr",
-    "description": "Une œuvre historique classique qui retrace l'âge d'or de la civilisation arabo-musulmane, mettant en lumière son apport majeur aux arts, aux sciences et à la philosophie européenne.",
-    "isbn": "978-2841320057",
-    "pages": 512
-  },
-  {
-    "id": "example-french",
-    "cover": "",
-    "title": "Le Déclassement Français",
-    "author": "Christian Chesnot, Georges Malbrunot",
-    "language": "fr",
-    "description": "Une enquête journalistique rigoureuse dressant le bilan des erreurs diplomatiques et politiques ayant mené au recul progressif de l'influence de la France sur l'échiquier mondial.",
-    "isbn": "978-2749946528",
-    "pages": 350
-  },
-  {
-    "id": "example-french",
-    "cover": "",
+    "cover": "./src/mediocratie.jpg",
     "title": "La Médiocratie",
     "author": "Alain Deneault",
     "language": "fr",
@@ -941,7 +142,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
+    "cover": "./src/tv-lobotomie.jpg",
     "title": "TV Lobotomie",
     "author": "Michel Desmurget",
     "language": "fr",
@@ -951,7 +152,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
+    "cover": "./src/les-miserables.jpg",
     "title": "Les Misérables",
     "author": "Victor Hugo",
     "language": "fr",
@@ -961,7 +162,7 @@
   },
   {
     "id": "example-french",
-    "cover": "",
+    "cover": "./src/noetmoi.jpg",
     "title": "No et moi",
     "author": "Delphine de Vigan",
     "language": "fr",
@@ -970,13 +171,23 @@
     "pages": 250
   },
   {
-  "id": "example-spanish",
-  "cover": "",
-  "title": "La raza cósmica",
-  "author": "José Vasconcelos",
-  "language": "es",
-  "description": "Un ensayo filosófico y social sumamente influyente donde se plantea la teoría de que en Iberoamérica surgirá una quinta raza universal, fruto del mestizaje, que unificará a la humanidad en una nueva era espiritual y estética.",
-  "isbn": "978-9700757285",
-  "pages": 164
-}
+    "id": "example-spanish",
+    "cover": "./src/razacosmica.jpg",
+    "title": "La raza cósmica",
+    "author": "José Vasconcelos",
+    "language": "es",
+    "description": "Un ensayo filosófico y social sumamente influyente donde se plantea la teoría de que en Iberoamérica surgirá una quinta raza universal, fruto del mestizaje, que unificará a la humanidad en una nueva era espiritual y estética.",
+    "isbn": "978-9700757285",
+    "pages": 164
+  },
+  {
+    "id": "example-spanish",
+    "cover": "./src/sombraviento.jpg",
+    "title": "La sombra del viento",
+    "author": "Carlos Ruiz Zafón",
+    "language": "es",
+    "description": "Un amanecer de 1945, un muchacho es conducido por su padre a un misterioso lugar oculto en el corazón de la ciudad vieja de Barcelona: el Cementerio de los Libros Olvidados. Allí, Daniel Sempere encuentra un libro maldito que cambiará el rumbo de su vida.",
+    "isbn": "978-8408043645",
+    "pages": 576
+  }
 ]
