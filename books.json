@@ -1,6 +1,6 @@
 [
   {
-    "id": "example-english",
+    "id": "gatsby",
     "cover": "./src/gatsby.jpg",
     "title": "The Great Gatsby",
     "author": "F. Scott Fitzgerald",
@@ -10,7 +10,7 @@
     "pages": 180
   },
   {
-    "id": "example-spanish",
+    "id": "cien-anos-de-soledad",
     "cover": "./src/cien-anos-de-soledad.jpg",
     "title": "Cien Años de Soledad",
     "author": "Gabriel García Márquez",
@@ -20,7 +20,7 @@
     "pages": 496
   },
   {
-    "id": "example-english",
+    "id": "secret-history",
     "cover": "./src/secrethistory.jpg",
     "title": "The Secret History",
     "author": "Donna Tartt",
@@ -30,7 +30,7 @@
     "pages": 559
   },
   {
-    "id": "example-english",
+    "id": "crime-and-punishment",
     "cover": "./src/CrimePunishment.jpg",
     "title": "Crime & Punishment",
     "author": "Fyodor Dostoevsky",
@@ -39,9 +39,8 @@
     "isbn": "978-0140449136",
     "pages": 671
   },
-
   {
-    "id": "example-english",
+    "id": "nineteen-eighty-four",
     "cover": "./src/1984.jpg",
     "title": "1984",
     "author": "George Orwell",
@@ -51,7 +50,7 @@
     "pages": 328
   },
   {
-    "id": "example-english",
+    "id": "structure-of-scientific-revolutions",
     "cover": "./src/Struct-Sci-Revol.jpg",
     "title": "The Structure of Scientific Revolutions",
     "author": "Thomas S. Kuhn",
@@ -61,7 +60,7 @@
     "pages": 264
   },
   {
-    "id": "example-english",
+    "id": "the-republic",
     "cover": "./src/republic.jpg",
     "title": "The Republic",
     "author": "Plato",
@@ -71,8 +70,8 @@
     "pages": 461
   },
   {
-    "id": "example-english",
-    "cover": "./src//trial.jpg",
+    "id": "the-trial",
+    "cover": "./src/trial.jpg",
     "title": "The Trial",
     "author": "Franz Kafka",
     "language": "en",
@@ -81,7 +80,7 @@
     "pages": 304
   },
   {
-    "id": "example-english",
+    "id": "rise-and-fall-of-the-great-powers",
     "cover": "./src/risefallpowers.png",
     "title": "The Rise And Fall Of The Great Powers",
     "author": "Paul Kennedy",
@@ -91,7 +90,7 @@
     "pages": 704
   },
   {
-    "id": "example-english",
+    "id": "vanka",
     "cover": "./src/vanka.jpg",
     "title": "Vanka",
     "author": "Anton Chekhov",
@@ -101,7 +100,7 @@
     "pages": 480
   },
   {
-    "id": "example-french",
+    "id": "la-trilogie",
     "cover": "./src/La-Trilogie-des-9.jpg",
     "title": "9 (La Trilogie)",
     "author": "Marc Levy",
@@ -111,7 +110,7 @@
     "pages": 432
   },
   {
-    "id": "example-french",
+    "id": "huiles-essentielles",
     "cover": "./src/huiles-festy.jpg",
     "title": "Mes 15 huiles essentielles",
     "author": "Danièle Festy",
@@ -121,7 +120,7 @@
     "pages": 288
   },
   {
-    "id": "example-french",
+    "id": "simulacres-et-simulation",
     "cover": "./src/sets.jpg",
     "title": "Simulacres et simulation",
     "author": "Jean Baudrillard",
@@ -131,7 +130,7 @@
     "pages": 235
   },
   {
-    "id": "example-french",
+    "id": "mediocratie",
     "cover": "./src/mediocratie.jpg",
     "title": "La Médiocratie",
     "author": "Alain Deneault",
@@ -141,7 +140,7 @@
     "pages": 224
   },
   {
-    "id": "example-french",
+    "id": "tv-lobotomie",
     "cover": "./src/tv-lobotomie.jpg",
     "title": "TV Lobotomie",
     "author": "Michel Desmurget",
@@ -151,7 +150,7 @@
     "pages": 320
   },
   {
-    "id": "example-french",
+    "id": "les-miserables",
     "cover": "./src/les-miserables.jpg",
     "title": "Les Misérables",
     "author": "Victor Hugo",
@@ -161,7 +160,7 @@
     "pages": 1664
   },
   {
-    "id": "example-french",
+    "id": "no-et-moi",
     "cover": "./src/noetmoi.jpg",
     "title": "No et moi",
     "author": "Delphine de Vigan",
@@ -171,7 +170,7 @@
     "pages": 250
   },
   {
-    "id": "example-spanish",
+    "id": "raza-cosmica",
     "cover": "./src/razacosmica.jpg",
     "title": "La raza cósmica",
     "author": "José Vasconcelos",
@@ -181,7 +180,7 @@
     "pages": 164
   },
   {
-    "id": "example-spanish",
+    "id": "sombra-del-viento",
     "cover": "./src/sombraviento.jpg",
     "title": "La sombra del viento",
     "author": "Carlos Ruiz Zafón",
