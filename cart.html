@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cart — CHAPTER</title>
+  <link rel="icon" type="image/png" href="favicon2.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="cart.js" defer></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syncopate:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Inter', sans-serif;
+      background: #000000;
+      color: #ffffff;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+    .font-syncopate { font-family: 'Syncopate', sans-serif; }
+    .m-stripe {
+      height: 4px;
+      background: linear-gradient(90deg, #0066b1 0%, #1c69d4 50%, #e22718 100%);
+    }
+    .lang-dot {
+      width: 6px; height: 6px; border-radius: 50%; display: inline-block;
+    }
+    .lang-dot.en { background: #0066b1; }
+    .lang-dot.fr { background: #1c69d4; }
+    .lang-dot.es { background: #e22718; }
+    ::-webkit-scrollbar { width: 6px; }
+    ::-webkit-scrollbar-track { background: #0c0c0c; }
+    ::-webkit-scrollbar-thumb { background: #3c3c3c; }
+    ::selection { background: #ffffff; color: #000000; }
+  </style>
+</head>
+<body>
+
+<div class="m-stripe"></div>
+
+<header class="sticky top-0 z-50 bg-[#000000] border-b border-[#3c3c3c]">
+  <div class="max-w-[1440px] mx-auto px-6 py-4 flex items-center justify-between gap-6">
+    <a href="index.html" class="font-syncopate text-xl font-bold tracking-[0.3em] text-[#ffffff] no-underline hover:opacity-80 transition-opacity">CHAPTER</a>
+    <div class="flex-1 max-w-[480px] hidden md:block"></div>
+    <div class="flex items-center gap-6">
+      <button onclick="location.href='cart.html'" class="relative bg-transparent border-0 cursor-pointer text-[#ffffff] hover:opacity-70 transition-opacity" title="View cart">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
+          <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
+          <line x1="3" y1="6" x2="21" y2="6"></line>
+          <path d="M16 10a4 4 0 01-8 0"></path>
+        </svg>
+        <span id="cartCount" class="absolute -top-2 -right-2 bg-[#ffffff] text-[#000000] text-[10px] font-bold font-syncopate w-5 h-5 flex items-center justify-center">0</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main class="min-h-screen">
+  <div class="max-w-[1440px] mx-auto px-6 py-24">
+    <a href="index.html" class="bg-transparent border-0 text-[#8c8c8c] font-syncopate text-xs tracking-[0.25em] cursor-pointer hover:text-[#ffffff] transition-colors mb-12 inline-block no-underline">← BACK TO SHOP</a>
+    <h2 class="font-syncopate text-3xl font-bold tracking-[0.2em] mb-2">YOUR CART</h2>
+    <p class="text-[#8c8c8c] font-light text-sm tracking-wider mb-16">Review your selected editions</p>
+
+    <div class="flex flex-col lg:flex-row gap-16">
+      <div class="flex-1" id="cartItems"></div>
+
+      <aside class="w-full lg:w-96 shrink-0">
+        <div class="lg:sticky lg:top-28">
+          <div class="border border-[#3c3c3c] p-8" style="border-radius:0">
+            <h3 class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c] mb-6">SUMMARY</h3>
+            <div class="flex justify-between items-center mb-8">
+              <span class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c]">TOTAL</span>
+              <span id="cartTotal" class="font-syncopate text-2xl font-bold tracking-wider"></span>
+            </div>
+            <button id="checkoutBtn" class="w-full bg-[#ffffff] text-[#000000] border-0 px-8 py-4 font-syncopate text-sm tracking-[0.25em] cursor-pointer hover:opacity-90 transition-opacity" style="border-radius:0">PROCEED TO CHECKOUT</button>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="border-t border-[#3c3c3c] mt-24">
+  <div class="m-stripe"></div>
+  <div class="max-w-[1440px] mx-auto px-6 py-12 flex items-center justify-between">
+    <span class="font-syncopate text-xs tracking-[0.3em] text-[#5c5c5c]">CHAPTER © 2026</span>
+    <div class="flex gap-6 font-syncopate text-[10px] tracking-[0.25em] text-[#5c5c5c]">
+      <span>EN</span>
+      <span>FR</span>
+      <span>ES</span>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>CHAPTER — Multilingual Bookstore</title>
-  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="icon" type="image/png" href="favicon2.png">
   <script src="https://cdn.tailwindcss.com"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
   <script src="script.js" defer></script>
@@ -27,20 +27,6 @@
     }
     .page { display: none; }
     .page.active { display: block; }
-    .cart-panel {
-      transform: translateX(100%);
-      transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .cart-panel.open { transform: translateX(0); }
-    .cart-overlay {
-      opacity: 0;
-      pointer-events: none;
-      transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
-    }
-    .cart-overlay.open {
-      opacity: 1;
-      pointer-events: all;
-    }
     .filter-checkbox:checked + label {
       background: #ffffff;
       color: #000000;
@@ -84,7 +70,7 @@
       <input type="text" id="globalSearch" onkeydown="if(event.key==='Enter'){state.filters.search=this.value;navigateTo('plp')}" class="w-full bg-transparent border border-[#3c3c3c] px-4 py-2 text-sm text-[#ffffff] font-light tracking-wider outline-none focus:border-[#ffffff] transition-colors" placeholder="SEARCH TITLES, AUTHORS..." style="border-radius:0">
     </div>
     <div class="flex items-center gap-6">
-      <button onclick="toggleCart()" class="relative bg-transparent border-0 cursor-pointer text-[#ffffff] hover:opacity-70 transition-opacity">
+      <button onclick="toggleCart()" class="relative bg-transparent border-0 cursor-pointer text-[#ffffff] hover:opacity-70 transition-opacity" title="View cart">
         <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
           <path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"></path>
           <line x1="3" y1="6" x2="21" y2="6"></line>
@@ -153,7 +139,8 @@
             <div id="pdpLangIndicator" class="mb-4"></div>
             <h1 id="pdpTitle" class="font-syncopate text-4xl font-bold tracking-[0.05em] mb-3"></h1>
             <p id="pdpAuthor" class="text-[#8c8c8c] font-light text-lg mb-8"></p>
-            <p id="pdpDescription" class="font-light text-sm leading-relaxed text-[#cccccc] mb-10"></p>
+            <p id="pdpDescription" class="font-light text-sm leading-relaxed text-[#cccccc] mb-8"></p>
+            <p id="pdpPrice" class="font-syncopate text-2xl font-bold tracking-wider mb-10"></p>
             <button id="pdpAddToCart" onclick="addToCartFromPDP()" class="w-full bg-transparent border border-[#ffffff] px-8 py-4 font-syncopate text-sm tracking-[0.25em] text-[#ffffff] hover:bg-[#ffffff] hover:text-[#000000] transition-all duration-300 cursor-pointer mb-12" style="border-radius:0">
               ADD TO CART
             </button>
@@ -170,33 +157,6 @@
   </section>
 
 </main>
-
-<div class="cart-overlay fixed inset-0 z-40 bg-[#000000]/80" onclick="toggleCart()" id="cartOverlay"></div>
-
-<div class="cart-panel fixed top-0 right-0 z-50 h-full w-full max-w-[480px] bg-[#0c0c0c] border-l border-[#3c3c3c] overflow-y-auto" id="cartPanel">
-  <div class="p-8">
-    <div class="flex items-center justify-between mb-10">
-      <h2 class="font-syncopate text-sm tracking-[0.25em]">CART</h2>
-      <button onclick="toggleCart()" class="bg-transparent border-0 text-[#ffffff] cursor-pointer hover:opacity-70 transition-opacity">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="square">
-          <line x1="18" y1="6" x2="6" y2="18"></line>
-          <line x1="6" y1="6" x2="18" y2="18"></line>
-        </svg>
-      </button>
-    </div>
-    <div id="cartItems"></div>
-    <div id="cartEmpty" class="text-[#5c5c5c] font-light text-sm py-20 text-center">YOUR CART IS EMPTY</div>
-    <div id="cartFooter" class="hidden">
-      <div class="border-t border-[#3c3c3c] pt-6 mt-6">
-        <div class="flex justify-between items-center mb-6">
-          <span class="font-syncopate text-xs tracking-[0.25em] text-[#8c8c8c]">TOTAL</span>
-          <span id="cartTotal" class="font-syncopate text-xl font-bold tracking-wider"></span>
-        </div>
-        <button class="w-full bg-[#ffffff] text-[#000000] border-0 px-8 py-4 font-syncopate text-sm tracking-[0.25em] cursor-pointer hover:opacity-90 transition-opacity" style="border-radius:0">PROCEED TO CHECKOUT</button>
-      </div>
-    </div>
-  </div>
-</div>
 
 <footer class="border-t border-[#3c3c3c] mt-24">
   <div class="m-stripe"></div>

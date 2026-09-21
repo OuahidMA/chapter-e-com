@@ -1,5 +1,19 @@
 const LANG_LABELS = { en: 'ENGLISH', fr: 'FRANÇAIS', es: 'ESPAÑOL' };
+const CART_KEY = 'chapter_cart';
 let BOOKS = [];
+
+function saveCart() {
+  localStorage.setItem(CART_KEY, JSON.stringify(state.cart));
+}
+
+function loadCart() {
+  try {
+    const saved = localStorage.getItem(CART_KEY);
+    if (saved) state.cart = JSON.parse(saved);
+  } catch (e) {
+    state.cart = [];
+  }
+}
 
 const state = {
   currentPage: 'home',
@@ -132,6 +146,7 @@ function renderPDP(bookId) {
   document.getElementById('pdpTitle').textContent = book.title;
   document.getElementById('pdpAuthor').textContent = book.author;
   document.getElementById('pdpDescription').textContent = book.description;
+  document.getElementById('pdpPrice').textContent = book.price.toFixed(2) + ' MAD';
 
   const specs = [
     { label: 'AUTHOR', value: book.author },
@@ -148,50 +163,9 @@ function renderPDP(bookId) {
 }
 
 function renderCart() {
-  const container = document.getElementById('cartItems');
-  const empty = document.getElementById('cartEmpty');
-  const footer = document.getElementById('cartFooter');
-  const totalEl = document.getElementById('cartTotal');
   const countEl = document.getElementById('cartCount');
-
-  countEl.textContent = state.cart.length;
-
-  if (state.cart.length === 0) {
-    empty.style.display = 'block';
-    footer.classList.add('hidden');
-    container.innerHTML = '';
-    return;
-  }
-
-  empty.style.display = 'none';
-  footer.classList.remove('hidden');
-
-  let total = 0;
-  container.innerHTML = state.cart.map((item, idx) => {
-    const book = getBook(item.bookId);
-    if (!book) return '';
-    const langLabel = LANG_LABELS[book.language];
-    const price = 24.99;
-    total += price;
-    return `
-      <div class="flex gap-4 pb-6 mb-6 border-b border-[#3c3c3c]">
-        <div class="w-16 shrink-0 bg-[#121212] overflow-hidden" style="border-radius:0">
-          <img src="${book.cover}" alt="${book.title}" class="w-full aspect-[2/3] object-cover">
-        </div>
-        <div class="flex-1 min-w-0">
-          <h4 class="font-syncopate text-xs font-bold tracking-[0.05em] mb-1 truncate">${book.title}</h4>
-          <p class="text-[10px] font-light text-[#8c8c8c] mb-2">${book.author}</p>
-          <span class="inline-block px-2 py-0.5 border border-[#3c3c3c] font-syncopate text-[8px] tracking-[0.15em] text-[#8c8c8c]" style="border-radius:0">${langLabel}</span>
-          <div class="flex justify-between items-center mt-2">
-            <span class="font-syncopate text-xs tracking-wider">$${price.toFixed(2)}</span>
-            <button onclick="removeFromCart(${idx})" class="bg-transparent border-0 text-[#5c5c5c] hover:text-[#e22718] cursor-pointer transition-colors text-xs font-syncopate tracking-[0.15em]">REMOVE</button>
-          </div>
-        </div>
-      </div>
-    `;
-  }).join('');
-
-  totalEl.textContent = '$' + total.toFixed(2);
+  if (!countEl) return;
+  countEl.textContent = state.cart.reduce((s, i) => s + i.qty, 0);
 }
 
 function navigateTo(page) {
@@ -211,21 +185,18 @@ function selectBook(bookId) {
 }
 
 function toggleCart() {
-  const panel = document.getElementById('cartPanel');
-  const overlay = document.getElementById('cartOverlay');
-  const isOpen = panel.classList.contains('open');
-  panel.classList.toggle('open');
-  overlay.classList.toggle('open');
-  document.body.style.overflow = isOpen ? '' : 'hidden';
-  renderCart();
+  window.location.href = 'cart.html';
 }
 
 function addToCart(bookId) {
-  state.cart.push({ bookId });
-  renderCart();
-  if (!document.getElementById('cartPanel').classList.contains('open')) {
-    toggleCart();
+  const existing = state.cart.find(item => item.bookId === bookId);
+  if (existing) {
+    existing.qty++;
+  } else {
+    state.cart.push({ bookId, qty: 1 });
   }
+  saveCart();
+  renderCart();
   gsap.fromTo('#cartCount', { scale: 1.5 }, { scale: 1, duration: 0.3, ease: 'back.out(2)' });
 }
 
@@ -233,11 +204,6 @@ function addToCartFromPDP() {
   if (state.selectedBookId) {
     addToCart(state.selectedBookId);
   }
-}
-
-function removeFromCart(idx) {
-  state.cart.splice(idx, 1);
-  renderCart();
 }
 
 function toggleLangFilter(code) {
@@ -281,6 +247,7 @@ function initAnimations() {
 }
 
 document.addEventListener('DOMContentLoaded', function() {
+  loadCart();
   fetch('books.json')
     .then(res => res.json())
     .then(data => {
